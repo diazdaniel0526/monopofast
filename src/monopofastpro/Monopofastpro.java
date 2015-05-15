@@ -5,8 +5,10 @@
  */
 package monopofastpro;
 
+
 import byui.cit260.monopofastPro.model.FoodItem;
 import byui.cit260.monopofastPro.model.IngredientOrder;
+
 import byui.cit260.monopofastPro.model.Player;
 
 /**
@@ -14,6 +16,7 @@ import byui.cit260.monopofastPro.model.Player;
  * @author Galicia
  */
 public class Monopofastpro {
+    private static Object drink;
 
     /**
      * @param args the command line arguments
@@ -26,15 +29,8 @@ public class Monopofastpro {
         
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
-    
-        FoodItem drink = new FoodItem();
-        
-        drink.setName("water");
-        drink.setTypeOfFood("beverage");
-        drink.setDescription("Something to drink");
-        
-        String drinkInfo = drink.toString();
-        System.out.println(drinkInfo);
+
+
         
         IngredientOrder order = new IngredientOrder(); 
         
@@ -42,6 +38,7 @@ public class Monopofastpro {
         
         String ingredientInfo = order.toString();
         System.out.println(ingredientInfo);
+
     }
     
 }
