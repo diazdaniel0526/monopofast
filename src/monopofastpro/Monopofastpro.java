@@ -6,6 +6,7 @@
 package monopofastpro;
 
 
+import byui.cit260.monopofastPro.model.CharacterOfGame;
 import byui.cit260.monopofastPro.model.FoodItem;
 import byui.cit260.monopofastPro.model.IngredientOrder;
 
@@ -48,6 +49,21 @@ public class Monopofastpro {
         
         String restInfo = restOne.toString();
         System.out.println(restInfo);
+        
+        
+        CharacterOfGame charOne = new CharacterOfGame();
+        
+        charOne.setName("Paul");
+        charOne.setFastestTime(6.00);
+        charOne.setDescription("the greatest");
+        
+        String charInfo = charOne.toString();
+        System.out.println(charInfo);
+        
+    
+       
+        
+
         
         
         
