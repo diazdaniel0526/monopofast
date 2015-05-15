@@ -9,6 +9,7 @@ package monopofastpro;
 import byui.cit260.monopofastPro.model.Game;
 
 import byui.cit260.monopofastPro.model.Player;
+import byui.cit260.monopofastPro.model.Restaurant;
 
 /**
  *
@@ -41,6 +42,18 @@ public class Monopofastpro {
         System.out.println(gameInfo);
         
 
+        
+        Restaurant restOne = new Restaurant();
+        
+        restOne.setName("Ardys");
+        restOne.setDescription("First World");
+        
+        String restInfo = restOne.toString();
+        System.out.println(restInfo);
+        
+        
+        
+        
     }
     
 }
