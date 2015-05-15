@@ -6,6 +6,7 @@
 package monopofastpro;
 
 import byui.cit260.monopofastPro.model.FoodItem;
+import byui.cit260.monopofastPro.model.IngredientOrder;
 import byui.cit260.monopofastPro.model.Player;
 
 /**
@@ -34,6 +35,13 @@ public class Monopofastpro {
         
         String drinkInfo = drink.toString();
         System.out.println(drinkInfo);
+        
+        IngredientOrder order = new IngredientOrder(); 
+        
+        order.setOrder("order of ingredients");
+        
+        String ingredientInfo = order.toString();
+        System.out.println(ingredientInfo);
     }
     
 }
