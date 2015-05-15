@@ -5,6 +5,7 @@
  */
 package monopofastpro;
 
+import byui.cit260.monopofastPro.model.Game;
 import byui.cit260.monopofastPro.model.Player;
 
 /**
@@ -24,6 +25,18 @@ public class Monopofastpro {
         
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
+        
+        
+        
+        
+        Game gameOne = new Game();
+        
+        gameOne.setDescriptionOfGame("First game");
+        gameOne.setTotalScore(10);
+        
+        String gameInfo = gameOne.toString();
+        System.out.println(gameInfo);
+        
     }
     
 }
