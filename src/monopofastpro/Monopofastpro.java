@@ -5,6 +5,7 @@
  */
 package monopofastpro;
 
+import byui.cit260.monopofastPro.model.FoodItem;
 import byui.cit260.monopofastPro.model.Player;
 
 /**
@@ -24,6 +25,15 @@ public class Monopofastpro {
         
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
+    
+        FoodItem drink = new FoodItem();
+        
+        drink.setName("water");
+        drink.setTypeOfFood("beverage");
+        drink.setDescription("Something to drink");
+        
+        String drinkInfo = drink.toString();
+        System.out.println(drinkInfo);
     }
     
 }
