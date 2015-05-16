@@ -5,6 +5,7 @@
  */
 package monopofastpro;
 
+import byui.cit260.monopofastPro.model.Location;
 import byui.cit260.monopofastPro.model.Player;
 
 /**
@@ -24,6 +25,12 @@ public class Monopofastpro {
         
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
+        
+        
+        Location LocationCoordinates = new Location ();
+        LocationCoordinates.setCoordinates("coordinates of location");
+        String locationCoordinatesInfo = LocationCoordinates.toString();
+        System.out.println(locationCoordinatesInfo);
     }
     
 }
