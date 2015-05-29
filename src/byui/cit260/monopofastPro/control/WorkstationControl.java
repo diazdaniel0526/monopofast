@@ -11,7 +11,7 @@ package byui.cit260.monopofastPro.control;
  */
 public class WorkstationControl {
     
-    public double calcTimeToCompleteOrder(double cooking, double, washing) {
+    public double calcTimeToCompleteOrder(double cooking, double washing) {
         
         if (cooking <= 0) {
 		return -1;
@@ -20,8 +20,10 @@ public class WorkstationControl {
 	if (washing <= 0) {
                 return -1;
         }        
-	time = cooking * 6 + washing
-	RETURN time
+        
+	double time = (cooking * 6) + washing;
+                
+	return time;
 
     }
     
