@@ -26,5 +26,22 @@ public class WorkstationControl {
 	return time;
 
     }
+     public double calcturnover(double cookingTurnover, double cookingSticks, double makingDrinks) {
+                 if (cookingTurnover <= 0) {
+		return -1;
+        }
+        
+	if (cookingSticks <= 0) {
+                return -1;
+        }        
+        
+        if (makingDrinks <= 0) {
+                return -1;
+        }
+	double calcTurnover = (cookingTurnover + cookingSticks + makingDrinks;
+                
+	return calcTurnover;
+         
+    }
     
 }
