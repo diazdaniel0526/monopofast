@@ -38,7 +38,7 @@ public class WorkstationControl {
         if (makingDrinks <= 0) {
                 return -1;
         }
-	double calcTurnover = (cookingTurnover + cookingSticks + makingDrinks;
+	double calcTurnover = cookingTurnover + cookingSticks + makingDrinks;
                 
 	return calcTurnover;
          
