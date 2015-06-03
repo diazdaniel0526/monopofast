@@ -21,6 +21,34 @@ public void startProgram() {
 }
 
     private void displayBanner() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+     System.out.println("\n\n**************************************");
+     
+     System.out.println("*                                      *"
+                    + "\n* Monopofast is a quick-paced game and *"
+                    + "\n* its objective is to monopolize the   *"
+                    + "\n* major fast food joints in the US.    *");
+     
+     System.out.println("*                                      *"
+                    + "\n* To do this, you must work your way   *"
+                    + "\n* through the ranks ensuring that you  *"
+                    + "\n* are faster than the owner of each    *"
+                    + "\n* joint at making their food. You'll   *"
+                    + "\n* start as a lowly fry-dipper and work *"
+                    + "\n* your way up to completing the most   *"
+                    + "\n* difficult sandwiches in record time. *"
+                    + "\n* After conquering one fast food joint,*"
+                    + "\n* you will move on to the next,        *"
+                    + "\n* starting at the bottom each time.    *"
+                    + "\n* Restaurants included in the game are:*"
+                    + "\n* McDumbledore’s, Venti’s, Ardy’s,      *"
+                    + "\n* Karl’s Sr., Jack and the Fox, and    *" 
+                    + "\n* Queen Burger.                        *");
+     
+     System.out.println("*                                     *"
+                    + "\n* Good Luck and Enjoy it!!             *"
+                    + "\n*                                      *");
+     
+     System.out.println("*****************************************");
+     
     }
 }
