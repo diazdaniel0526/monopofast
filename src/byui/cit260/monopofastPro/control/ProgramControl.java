@@ -6,6 +6,7 @@
 package byui.cit260.monopofastPro.control;
 
 import byui.cit260.monopofastPro.model.Player;
+import monopofastpro.Monopofastpro;
 
 /**
  *
@@ -14,7 +15,16 @@ import byui.cit260.monopofastPro.model.Player;
 public class ProgramControl {
 
     public static Player createPlayer(String playersName) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+      if ( playersName == null) {
+          return null;
+      }
+      
+      Player player = new Player();
+      player.setNameOfPlayer(playersName);
+      
+      Monopofastpro.setPlayer(player);
+      
+      return player;
     }
     
 }

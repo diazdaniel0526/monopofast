@@ -13,6 +13,27 @@ import byui.cit260.monopofastPro.view.StartProgramView;
  */
 public class Monopofastpro {
     
+    private static Game currentGame = null;
+    private static Player player = null;
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        Monopofastpro.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        Monopofastpro.player = player;
+    }
+    
+    
+    
     public static void main(String[] args) { 
         //create start programViewand start the program
         StartProgramView startProgramView = new StartProgramView();
