@@ -5,6 +5,8 @@
  */
 package monopofastpro;
 
+import byui.cit260.monopofastPro.model.Game;
+import byui.cit260.monopofastPro.model.Player;
 import byui.cit260.monopofastPro.view.StartProgramView;
 
 /**

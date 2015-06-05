@@ -33,15 +33,16 @@ public void startProgram() {
         this.displayWelcomeMessage(player);
         
         //display the main menu
-        
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.displayMenu();
         
         
 }
     public void displayWelcomeMessage(Player player) {
-        System.out.println("\n\n==========================");
-        System.out.println("\tWelcome to the game" + player.getNameOfPlayer());
+        System.out.println("\n\n===============================================");
+        System.out.println("\tWelcome to the game " + player.getNameOfPlayer());
         System.out.println("\tHave fun, beat your best score!");
-        System.out.println("=============================");
+        System.out.println("===================================================");
     }
 
 
@@ -94,7 +95,7 @@ public void startProgram() {
             
             //if the name is invalid (less than to character in length))
             if (playersName.length() < 2) {
-                System.out.println("INvalid name - the name must not be blank");
+                System.out.println("Invalid name - the name must not be blank");
                 continue; // and repeat again
             }
             break; // out of the (exit) the repetition
