@@ -25,17 +25,17 @@ public class HelpMenuView {
     
     public void displayMenu() {
         
-        char selection = ' ';
+        String selection = " ";
         do {
             
             System.out.println(MENU);
             
             String input = this.getInput();
-            selection = input.charAt(0);
+            selection = input.substring(0,1);
             
             this.doAction(selection);
             
-        } while (selection != 'Q');
+        } while (!selection.equals("Q"));
     }
 
     private String getInput() {
@@ -64,18 +64,20 @@ public class HelpMenuView {
         return input; // return name
     }
 
-    private void doAction(char selection) {
+    private void doAction(String selection) {
+        selection = selection.toUpperCase();
+        
         switch (selection) {
-            case 'G' :
+            case "G" :
                 this.goalOfGame();
                 break;
-            case 'C' :
+            case "C" :
                 this.viewCommandsAvailable();
                 break;
-            case 'O' :
+            case "O" :
                 this.viewObjectsAvailable();
                 break;
-            case 'Q' :
+            case "Q" :
                 return;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
