@@ -43,5 +43,17 @@ public class WorkstationControl {
 	return calcTurnover;
          
     }
-    
+     public double calcTimeToCompleteOrderThree (double ChocMilkSha, double PlainMcBurg) {
+          if (ChocMilkSha <= 0) {
+		return -1;
+        }
+        
+	if (PlainMcBurg <= 0) {
+                return -1;
+        }        
+        
+	double time = (ChocMilkSha * 6) + (PlainMcBurg * 2);
+                
+	return time;
+     }
 }

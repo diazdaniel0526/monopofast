@@ -11,16 +11,15 @@ import java.util.Scanner;
  *
  * @author Galicia
  */
-public class HelpMenuView {
+public class ChallengeMenuView {
     
     private final String MENU = "\n"
             + "\n------------------------------"
             + "\n |         Help Menu         |"
             + "\n------------------------------"
-            + "\nG – Goal of the game?"  
-            + "\nC - View Commands available"
-            + "\nO – View Objects available" 
-            + "\nQ – Quit"
+            + "\nV – View Challenges"  
+            + "\nC - View Completed Challenges"
+            + "\nQ – Quit"  
             + "\n------------------------------";
     
     public void displayMenu() {
@@ -32,11 +31,11 @@ public class HelpMenuView {
             
             String input = this.getInput();
             selection = input.substring(0,1);
-            selection = selection.toUpperCase();
+            
             this.doAction(selection);
             
         } while (!selection.equals("Q"));
-    }
+}
 
     private String getInput() {
        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -61,21 +60,18 @@ public class HelpMenuView {
             break; // out of the (exit) the repetition
         }
         
-        return input; // return name
+        return input; // return selection
     }
-
+    
     private void doAction(String selection) {
-        
+        selection = selection.toUpperCase();
         
         switch (selection) {
-            case "G" :
-                this.goalOfGame();
+            case "V" :
+                this.viewChallenges();
                 break;
             case "C" :
-                this.viewCommandsAvailable();
-                break;
-            case "O" :
-                this.viewObjectsAvailable();
+                this.viewCompletedChallenges();
                 break;
             case "Q" :
                 return;
@@ -84,51 +80,42 @@ public class HelpMenuView {
         }
     }
 
-    private void goalOfGame() {
+    private void viewChallenges() {
         System.out.println("********************************************************");
         
-         System.out.println("\n* The ultimate goal in the game is to get         *"
-                          + "\n* to the top of the food chain in each restaurant *"
-                          + "\n* and merge them all together in order to become  *"
+         System.out.println("\n*                  Challenge 1                    *"
+                          + "\n* If it takes you _____ seconds to make a Son of  *"
+                          + "\n* a Bacon Eater Sandwich, and there are 6 people  *"
                           + "\n* the ultimate fast food tycoon. After taking     *"
                           + "\n* control of each restaurant, you go to the next  *"
-                          + "\n* restaurant starting at the bottom again.        *");
+                          + "\n* ordering one, and you must wash your hands      *"
+                          + "\n* (which takes _____ seconds), how long will it   *"
+                          + "\n* take you complete all of the above?             *");
+         
+        System.out.println("********************************************************");
+        
+        System.out.println("********************************************************");
+        
+         System.out.println("\n*                  Challenge 2                     *"
+                          + "\n* If it takes you _____ seconds to make a turnover,*"
+                          + "\n* _____ seconds to make mozzarella sticks, how     *"
+                          + "\n* long will it take you to complete 3 turnovers,   *"
+                          + "\n* and 2 mozzarella sticks?                         *");
+         
+        System.out.println("********************************************************");
+        
+        System.out.println("********************************************************");
+        
+         System.out.println("\n*                  Challenge 3                     *"
+                          + "\n* If it takes you _____ seconds to make a chocolate*"
+                          + "\n* milkshake, _____ seconds to make Plain McBurger. *"
+                          + "\n* How long will it take you to complete 6 Chocolate*"
+                          + "\n* milkshakes and 2 Plain McBurgers?                *");
          
         System.out.println("********************************************************");
     }
-    
-    private void viewCommandsAvailable() {
-        System.out.println("*****************************");
-        
-         System.out.println("\n* add      *" +
-                            "\n* bake     *" +
-                            "\n* blend    *" +
-                            "\n* dispense *" +
-                            "\n* frost    *" +
-                            "\n* prepare  *" +
-                            "\n* remove   *" +
-                            "\n* serve    *");
-         
-        System.out.println("*****************************");
-    }
 
-    private void viewObjectsAvailable() {
-        System.out.println("*****************************");
-        
-         System.out.println("\n* bacon            *" +
-                            "\n* bottom bun       *" +
-                            "\n* bread            *" +
-                            "\n* burger           *" +
-                            "\n* cheese           *" +
-                            "\n* egg              *" +
-                            "\n* grilled onions   *" +
-                            "\n* ham              *" +
-                            "\n* heehaw sauce     *" +
-                            "\n* ketchup          *" +
-                            "\n* lettuce          *" +
-                            "\n* mayo             *" +
-                            "\n* mustard          *");
-         
-        System.out.println("*****************************"); 
+    private void viewCompletedChallenges() {
+         System.out.println("Display Challenges Completed");
     }
 }

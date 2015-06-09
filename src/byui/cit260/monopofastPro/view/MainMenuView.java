@@ -21,7 +21,8 @@ public class MainMenuView {
             + "\n------------------------------"
             + "\nN – Start New Game" 
             + "\nH - Get Help"
-            + "\nS – Saved Game" 
+            + "\nS – Saved Game"
+            + "\nC – View Challenges" 
             + "\nQ – Quit"
             + "\n------------------------------";
     
@@ -50,6 +51,9 @@ public class MainMenuView {
                 break;
             case 'S' :
                 this.saveGame();
+                break;
+            case 'C' :
+                this.viewChallenges();
                 break;
             case 'Q' :
                 return;
@@ -101,6 +105,11 @@ public class MainMenuView {
 
     private void saveGame() {
         System.out.println(" ** savegame function called **");
+    }
+
+    private void viewChallenges() {
+         ChallengeMenuView challengeMenu = new ChallengeMenuView();
+        challengeMenu.displayMenu();
     }
             
 }
