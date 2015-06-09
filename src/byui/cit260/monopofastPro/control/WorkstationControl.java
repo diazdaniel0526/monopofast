@@ -26,21 +26,19 @@ public class WorkstationControl {
 	return time;
 
     }
-     public double calcturnover(double cookingTurnover, double cookingSticks, double makingDrinks) {
-                 if (cookingTurnover <= 0) {
-		return -1;
-        }
+     public double calcTimeToCompleteOrderTwo(double cookingTurnover, double cookingSticks) {
         
-	if (cookingSticks <= 0) {
+	if (cookingTurnover <= 0) {
                 return -1;
         }        
         
-        if (makingDrinks <= 0) {
+        if (cookingSticks <= 0) {
                 return -1;
         }
-	double calcTurnover = cookingTurnover + cookingSticks + makingDrinks;
+        
+	double time = (cookingTurnover * 3) + (cookingSticks * 2);
                 
-	return calcTurnover;
+	return time;
          
     }
      public double calcTimeToCompleteOrderThree (double ChocMilkSha, double PlainMcBurg) {
