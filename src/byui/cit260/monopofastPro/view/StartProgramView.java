@@ -105,9 +105,4 @@ public void startProgram() {
        
     }
     
-    public static Player createPlayer(String playersName){
-        System.out.println("\n**** createPlayer function called ****");
-        return null;
-    }
-
-}
+ }

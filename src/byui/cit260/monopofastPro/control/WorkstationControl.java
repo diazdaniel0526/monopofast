@@ -11,7 +11,7 @@ package byui.cit260.monopofastPro.control;
  */
 public class WorkstationControl {
     
-    public double calcTimeToCompleteOrder(double cooking, double washing) {
+    public static double calcTimeToCompleteOrder(double cooking, double washing) {
         
         if (cooking <= 0) {
 		return -1;
@@ -26,7 +26,7 @@ public class WorkstationControl {
 	return time;
 
     }
-     public double calcTimeToCompleteOrderTwo(double cookingTurnover, double cookingSticks) {
+     public static double calcTimeToCompleteOrderTwo(double cookingTurnover, double cookingSticks) {
         
 	if (cookingTurnover <= 0) {
                 return -1;
@@ -41,7 +41,7 @@ public class WorkstationControl {
 	return time;
          
     }
-     public double calcTimeToCompleteOrderThree (double ChocMilkSha, double PlainMcBurg) {
+     public static double calcTimeToCompleteOrderThree (double ChocMilkSha, double PlainMcBurg) {
           if (ChocMilkSha <= 0) {
 		return -1;
         }
