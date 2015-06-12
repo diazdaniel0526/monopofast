@@ -102,7 +102,7 @@ public class ChallangeOneView {
        if (guess > 0 )
            System.out.println("Great, keep going with the next challange");
            return 1;
-       else
+           else if
            System.out.println("wrong, keep trying!");
            return -1;
     }
