@@ -41,6 +41,9 @@ public class WorkstationControl {
 	return time;
          
     }
+     
+     //ellis example for video
+     
      public static double calcTimeToCompleteOrderThree (double ChocMilkSha, double PlainMcBurg) {
           if (ChocMilkSha <= 0) {
 		return -1;

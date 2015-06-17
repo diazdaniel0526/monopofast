@@ -13,9 +13,10 @@ import monopofastpro.Monopofastpro;
  *
  * @author Galicia
  */
-public class MainMenuView {
+public class MainMenuView extends View {
 
-    private final String MENU = "\n"
+   public MainMenuView() {
+    super("\n"
             + "\n------------------------------"
             + "\n |        Main Menu          |"
             + "\n------------------------------"
@@ -24,24 +25,15 @@ public class MainMenuView {
             + "\nS – Saved Game"
             + "\nC – View Challenges" 
             + "\nQ – Quit"
-            + "\n------------------------------";
+            + "\n------------------------------");
     
-    public void displayMenu() {
-        
-        char selection = ' ';
-        do {
-            
-            System.out.println(MENU);
-            
-            String input = this.getInput();
-            selection = input.charAt(0);
-            
-            this.doAction(selection);
-            
-        } while (selection != 'Q');
-    }
-
-    private void doAction(char selection) {
+}
+   @Override 
+   public boolean doAction(Object obj) {
+       
+       String value = (String) obj;
+       value = value.toUpperCase(); //convert to all upper case
+       
         switch (selection) {
             case 'N' :
                 this.startNewGame();
@@ -62,32 +54,6 @@ public class MainMenuView {
         }
     }
 
-    private String getInput() {
-       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        boolean valid = false; // indicates if the name has been retrieved
-        String input = null;
-        Scanner keyboard = new Scanner(System.in); // keboard input stream
-        
-        while(!valid) { //while a valid name has not been retrieved
-            
-            //prompt for the players name
-            System.out.println("Enter your selection here:");
-            
-            //get the name form the keobard and trim off the blanks
-            input = keyboard.nextLine();
-            input = input.trim();
-            
-            //if the name is invalid (less than to character in length))
-            if (input.length() > 1) {
-                System.out.println("Invalid selection - the selection should be one letter");
-                continue; // and repeat again
-            }
-            break; // out of the (exit) the repetition
-        }
-        
-        return input; // return name
-       
-    }
 
     private void startNewGame() {
         //create a new game
@@ -95,12 +61,12 @@ public class MainMenuView {
         
         // display the game manu
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+        gameMenu.display();
     }
 
     private void getHelp() {
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.displayMenu();
+        helpMenu.display();
     }
 
     private void saveGame() {
@@ -109,7 +75,7 @@ public class MainMenuView {
 
     private void viewChallenges() {
          ChallengeMenuView challengeMenu = new ChallengeMenuView();
-        challengeMenu.displayMenu();
+        challengeMenu.display();
     }
             
 }
