@@ -39,7 +39,7 @@ public abstract class View implements ViewInterface {
             Scanner keyboard = new Scanner(System.in); // keboard input stream
             // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             boolean valid = false; // indicates if the name has been retrieved
-            String input = null;
+            String value = null;
         
         
         while(!valid) { //while a valid name has not been retrieved
@@ -66,7 +66,7 @@ public abstract class View implements ViewInterface {
             return promptMessage;
         }
         
-        public void setPromtMessage(String message) {
+        public void setPromptMessage(String message) {
             this.promptMessage = message;
         }
     
