@@ -5,66 +5,70 @@
  */
 package byui.cit260.monopofastPro.view;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 /**
  *
  * @author Galicia
  */
-public class ChallengeMenuView {
+public class ChallengeMenuView extends View{
     
-    private final String MENU = "\n"
+    public ChallengeMenuView() {
+        super("\n"
             + "\n------------------------------"
             + "\n |         Help Menu         |"
             + "\n------------------------------"
             + "\nV – View Challenges"  
             + "\nC - View Completed Challenges"
             + "\nQ – Quit"  
-            + "\n------------------------------";
-    
-    public void displayMenu() {
-        
-        String selection = " ";
-        do {
-            
-            System.out.println(MENU);
-            
-            String input = this.getInput();
-            selection = input.substring(0,1);
-            
-            this.doAction(selection);
-            
-        } while (!selection.equals("Q"));
-}
-
-    private String getInput() {
-       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        boolean valid = false; // indicates if the name has been retrieved
-        String input = null;
-        Scanner keyboard = new Scanner(System.in); // keboard input stream
-        
-        while(!valid) { //while a valid name has not been retrieved
-            
-            //prompt for the players name
-            System.out.println("Enter your selection here:");
-            
-            //get the name form the keobard and trim off the blanks
-            input = keyboard.nextLine();
-            input = input.trim();
-            
-            //if the name is invalid (less than to character in length))
-            if (input.length() > 1) {
-                System.out.println("Invalid selection - the selection should be one letter");
-                continue; // and repeat again
-            }
-            break; // out of the (exit) the repetition
-        }
-        
-        return input; // return selection
+            + "\n------------------------------");
     }
     
-    private void doAction(String selection) {
-        selection = selection.toUpperCase();
+//    public void displayMenu() {
+//        
+//        String selection = " ";
+//        do {
+//            
+//            System.out.println(MENU);
+//            
+//            String input = this.getInput();
+//            selection = input.substring(0,1);
+//            
+//            this.doAction(selection);
+//            
+//        } while (!selection.equals("Q"));
+//}
+//
+//    private String getInput() {
+//       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//        boolean valid = false; // indicates if the name has been retrieved
+//        String input = null;
+//        Scanner keyboard = new Scanner(System.in); // keboard input stream
+//        
+//        while(!valid) { //while a valid name has not been retrieved
+//            
+//            //prompt for the players name
+//            System.out.println("Enter your selection here:");
+//            
+//            //get the name form the keobard and trim off the blanks
+//            input = keyboard.nextLine();
+//            input = input.trim();
+//            
+//            //if the name is invalid (less than to character in length))
+//            if (input.length() > 1) {
+//                System.out.println("Invalid selection - the selection should be one letter");
+//                continue; // and repeat again
+//            }
+//            break; // out of the (exit) the repetition
+//        }
+//        
+//        return input; // return selection
+//    }
+    
+    @Override 
+     public boolean doAction(Object obj) {
+        
+       String value = (String) obj;
         
         switch (selection) {
             case "V" :

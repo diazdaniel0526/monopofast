@@ -6,7 +6,7 @@
 package byui.cit260.monopofastPro.view;
 
 import byui.cit260.monopofastPro.control.GameControl;
-import java.util.Scanner;
+//import java.util.Scanner;
 import monopofastpro.Monopofastpro;
 
 /**
@@ -32,7 +32,6 @@ public class MainMenuView extends View {
    public boolean doAction(Object obj) {
        
        String value = (String) obj;
-       value = value.toUpperCase(); //convert to all upper case
        
         switch (selection) {
             case 'N' :
