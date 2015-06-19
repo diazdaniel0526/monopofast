@@ -16,7 +16,7 @@ public class ChallengeMenuView extends View{
     public ChallengeMenuView() {
         super("\n"
             + "\n------------------------------"
-            + "\n |         Help Menu         |"
+            + "\n |         Challange Menu     |"
             + "\n------------------------------"
             + "\nV – View Challenges"  
             + "\nC - View Completed Challenges"

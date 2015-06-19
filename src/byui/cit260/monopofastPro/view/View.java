@@ -23,7 +23,7 @@ public abstract class View implements ViewInterface {
         public void display() {
         
         String value= "";
-        boolean done = false;
+        boolean done = true;
         
         do {
             System.out.println(promptMessage);//display promp message 
@@ -31,7 +31,7 @@ public abstract class View implements ViewInterface {
             //selection = input.charAt(0);
             done = this.doAction(value); // do cation based on the value entered
             
-        } while (!done);
+        } while (done);
     }
     
     @Override
