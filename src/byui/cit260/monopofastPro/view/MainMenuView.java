@@ -23,7 +23,8 @@ public class MainMenuView extends View {
             + "\nN – Start New Game" 
             + "\nH - Get Help"
             + "\nS – Saved Game"
-            + "\nC – View Challenges" 
+            + "\nC – View Challenges"
+            + "\nV – View Map"
             + "\nQ – Quit"
             + "\n------------------------------");
     
@@ -47,6 +48,9 @@ public class MainMenuView extends View {
                 break;
             case 'C' :
                 this.viewChallenges();
+                break;
+            case 'V':
+                this.viewMap();
                 break;
             case 'Q' :
                 return false;
@@ -79,5 +83,8 @@ public class MainMenuView extends View {
          ChallengeMenuView challengeMenu = new ChallengeMenuView();
         challengeMenu.display();
     }
-            
+       private void viewMap() {
+        MapMenuView viewMap = new MapMenuView();
+        viewMap.display();
+    }        
 }
