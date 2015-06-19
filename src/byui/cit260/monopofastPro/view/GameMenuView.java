@@ -71,7 +71,8 @@ public class GameMenuView extends View{
      public boolean doAction(Object obj) {
         
        String value = (String) obj;
-        
+       String selection = value;
+       
         
         switch (selection) {
             case "C" :
@@ -84,10 +85,11 @@ public class GameMenuView extends View{
                 this.challangeThree();
                 break;
             case "Q" :
-                return;
+                return false;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
         }
+        return true;
     }
 
     private void challangeOne() {

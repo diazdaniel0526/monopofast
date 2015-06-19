@@ -32,6 +32,8 @@ public class MainMenuView extends View {
    public boolean doAction(Object obj) {
        
        String value = (String) obj;
+       value = value.toUpperCase();
+       char selection = value.charAt(0);
        
         switch (selection) {
             case 'N' :
@@ -47,10 +49,11 @@ public class MainMenuView extends View {
                 this.viewChallenges();
                 break;
             case 'Q' :
-                return;
+                return false;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
         }
+        return true;
     }
 
 

@@ -69,7 +69,9 @@ public class ChallengeMenuView extends View{
      public boolean doAction(Object obj) {
         
        String value = (String) obj;
-        
+       value = value.toUpperCase();
+       String selection = value;
+       
         switch (selection) {
             case "V" :
                 this.viewChallenges();
@@ -78,10 +80,12 @@ public class ChallengeMenuView extends View{
                 this.viewCompletedChallenges();
                 break;
             case "Q" :
-                return;
+                return false;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
+                break;
         }
+        return true;
     }
 
     private void viewChallenges() {

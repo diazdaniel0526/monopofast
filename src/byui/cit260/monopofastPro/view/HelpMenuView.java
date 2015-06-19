@@ -68,9 +68,11 @@ public class HelpMenuView extends View {
 
     @Override 
    public boolean doAction(Object obj) {
-        
+       
        String value = (String) obj;
-        
+       value = value.toUpperCase();
+       String selection = value;
+       
         switch (selection) {
             case "G" :
                 this.goalOfGame();
@@ -82,10 +84,11 @@ public class HelpMenuView extends View {
                 this.viewObjectsAvailable();
                 break;
             case "Q" :
-                return;
+                return false;
             default:
                 System.out.println("\n*** Invalid Selection *** Try Again");
         }
+        return true;
     }
 
     private void goalOfGame() {
