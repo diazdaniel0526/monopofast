@@ -22,6 +22,7 @@ public class GameMenuView extends View{
             + "\nC - Challange #1"
             + "\nH - Challange #2"
             + "\nA - Challange #3"
+            + "\nP - Pause Options"
             + "\nQ – Quit"
             + "\n------------------------------");
     }
@@ -71,6 +72,7 @@ public class GameMenuView extends View{
      public boolean doAction(Object obj) {
         
        String value = (String) obj;
+       value = value.toUpperCase();
        String selection = value;
        
         
@@ -84,6 +86,9 @@ public class GameMenuView extends View{
             case "A" :
                 this.challangeThree();
                 break;
+            case "P" :
+                this.pauseMenu();
+                break;    
             case "Q" :
                 return false;
             default:
@@ -104,7 +109,9 @@ public class GameMenuView extends View{
         System.out.println("Calculate third challange");
     }
 
-   
-    
+    private void pauseMenu() {
+        PauseMenuView pauseView = new PauseMenuView();
+        pauseView.display();
+    }
     
 }
