@@ -6,6 +6,7 @@
 package byui.cit260.monopofastPro.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -15,6 +16,7 @@ import java.util.Objects;
 public class Restaurant implements Serializable{
     private String name;
     private String description;
+    private final ArrayList<Game> games = new ArrayList<>();
 
     public Restaurant() {
     }

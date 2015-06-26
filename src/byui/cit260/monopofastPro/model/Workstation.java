@@ -21,6 +21,7 @@ public class Workstation implements Serializable{
     private String description;
     private int requiredTime;
     private int actualTime;
+    private Location location;
 
     public String getName() {
         return name;
@@ -61,6 +62,15 @@ public class Workstation implements Serializable{
     public void setActualTime(int actualTime) {
         this.actualTime = actualTime;
     }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+    
 
     public Workstation(String name, String type, String description, int requiredTime, int actualTime) {
         this.name = name;

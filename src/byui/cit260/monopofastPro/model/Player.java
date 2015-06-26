@@ -6,6 +6,7 @@
 package byui.cit260.monopofastPro.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -17,6 +18,8 @@ public class Player implements Serializable{
     private String nameOfPlayer;
     private String skills;
     private double fastestTime;
+    
+    private final ArrayList<Game> games = new ArrayList<>();
 
     public Player() {
     }

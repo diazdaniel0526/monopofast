@@ -6,6 +6,7 @@
 package byui.cit260.monopofastPro.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -15,7 +16,13 @@ import java.util.Objects;
 public class Game implements Serializable{
     private String descriptionOfGame;
     private int totalScore;
+    
+    private Player player;
 
+    private CharacterOfGame character;
+    
+    private Restaurant restaurant;
+    
     public Game() {
     }
 
@@ -68,6 +75,30 @@ public class Game implements Serializable{
         this.totalScore = totalScore;
     }
     
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public CharacterOfGame getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(CharacterOfGame character) {
+        this.character = character;
+    }
+    
+
+    public Restaurant getRestaurant() {
+        return restaurant;
+    }
+
+    public void setRestaurant(Restaurant restaurant) {
+        this.restaurant = restaurant;
+    }
     
     
 }

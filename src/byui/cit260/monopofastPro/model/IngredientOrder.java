@@ -15,7 +15,9 @@ import java.util.Objects;
 public class IngredientOrder implements Serializable{
     
     //class instance variables
-    private String order; 
+    private String order;
+    private FoodItem foodItem;
+    private Ingredients ingredient;
 
     public String getOrder() {
         return order;
@@ -24,6 +26,23 @@ public class IngredientOrder implements Serializable{
     public void setOrder(String order) {
         this.order = order;
     }
+
+    public FoodItem getFoodItem() {
+        return foodItem;
+    }
+
+    public void setFoodItem(FoodItem foodItem) {
+        this.foodItem = foodItem;
+    }
+
+    public Ingredients getIngredient() {
+        return ingredient;
+    }
+
+    public void setIngredient(Ingredients ingredient) {
+        this.ingredient = ingredient;
+    }
+    
 
     public IngredientOrder() {
     }

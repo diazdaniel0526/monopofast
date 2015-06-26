@@ -7,6 +7,7 @@ package byui.cit260.monopofastPro.model;
 
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -17,6 +18,8 @@ public class Location implements Serializable {
     // class instance variables
     private int location; 
     private String levelType;
+    private CharacterOfGame[] characters;
+    private Workstation workstation;
 
     public int getLocation() {
         return location;
@@ -33,6 +36,16 @@ public class Location implements Serializable {
     public void setLevelType(String levelType) {
         this.levelType = levelType;
     }
+
+    public Workstation getWorkstation() {
+        return workstation;
+    }
+
+    public void setWorkstation(Workstation workstation) {
+        this.workstation = workstation;
+    }
+    
+    
 
     public Location() {
     }

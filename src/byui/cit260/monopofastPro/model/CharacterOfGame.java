@@ -7,6 +7,7 @@ package byui.cit260.monopofastPro.model;
 
 import java.awt.Point;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -21,6 +22,8 @@ public enum CharacterOfGame implements Serializable{
     
     private final Point coordinates;
     private final String description;
+    private CharacterOfGame character;
+    private Location[] locations;
 
     CharacterOfGame(String description) {
         this.description = description;
@@ -34,5 +37,14 @@ public enum CharacterOfGame implements Serializable{
     public String getDescription() {
         return description;
     }   
+
+    public CharacterOfGame getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(CharacterOfGame character) {
+        this.character = character;
+    }
    
+    
 }
