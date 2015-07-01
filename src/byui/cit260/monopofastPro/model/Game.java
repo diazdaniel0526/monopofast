@@ -89,11 +89,11 @@ public class Game implements Serializable{
     }
     
 
-    public Map getRestaurant() {
+    public Map getMap() {
         return map;
     }
 
-    public void setRestaurant(Map restaurant) {
+    public void setMap(Map restaurant) {
         this.map = restaurant;
     }
     

@@ -6,6 +6,7 @@
 package byui.cit260.monopofastPro.control;
 
 import byui.cit260.monopofastPro.model.Game;
+import byui.cit260.monopofastPro.model.Map;
 import byui.cit260.monopofastPro.model.Player;
 import monopofastpro.Monopofastpro;
 
@@ -25,7 +26,7 @@ public class GameControl {
         Map map = MapControl.createMap();
         game.setMap(map);
         
-        MapControl.MoveActorsToStartingLocation(map);
+        MapControl.moveActorsToStartingLocation(map);
             
     }
     

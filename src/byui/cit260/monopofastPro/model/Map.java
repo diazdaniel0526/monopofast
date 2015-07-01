@@ -18,6 +18,9 @@ public class Map implements Serializable{
     private String description;
     private final ArrayList<Game> games = new ArrayList<>();
     private Location[][] locations;
+    private int noOfRows;
+    private int noOfColumns;
+    
 
     public Map() {
     }
@@ -73,6 +76,22 @@ public class Map implements Serializable{
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public int getNoOfRows() {
+        return noOfRows;
+    }
+
+    public void setNoOfRows(int noOfRows) {
+        this.noOfRows = noOfRows;
+    }
+
+    public int getNoOfColumns() {
+        return noOfColumns;
+    }
+
+    public void setNoOfColumns(int noOfColumns) {
+        this.noOfColumns = noOfColumns;
     }
     
     

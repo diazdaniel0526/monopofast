@@ -6,6 +6,7 @@
 package monopofastpro;
 
 import byui.cit260.monopofastPro.model.Game;
+import byui.cit260.monopofastPro.model.Map;
 import byui.cit260.monopofastPro.model.Player;
 import byui.cit260.monopofastPro.view.StartProgramView;
 
@@ -17,6 +18,7 @@ public class Monopofastpro {
     
     private static Game currentGame = null;
     private static Player player = null;
+    private static Map map = null;
 
     public static Game getCurrentGame() {
         return currentGame;
@@ -32,6 +34,14 @@ public class Monopofastpro {
 
     public static void setPlayer(Player player) {
         Monopofastpro.player = player;
+    }
+
+    public static Map getMap() {
+        return map;
+    }
+
+    public static void setMap(Map map) {
+        Monopofastpro.map = map;
     }
     
     

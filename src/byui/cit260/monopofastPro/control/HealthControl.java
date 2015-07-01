@@ -11,7 +11,7 @@ package byui.cit260.monopofastPro.control;
  */
 public class HealthControl {
      
-    public static int[] SortOfHealthStrenght(int[] arr){
+    public static int[] SortingHealthStrenght(int[] arr){
          
         for (int i = 0; i < arr.length - 1; i++)
         {
