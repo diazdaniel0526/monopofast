@@ -6,6 +6,8 @@
 package byui.cit260.monopofastPro.view;
 
 import byui.cit260.monopofastPro.control.GameControl;
+import byui.cit260.monopofastPro.control.HealthControl;
+import static byui.cit260.monopofastPro.control.HealthControl.SortOfHealthStrenght;
 //import java.util.Scanner;
 import monopofastpro.Monopofastpro;
 
@@ -25,6 +27,7 @@ public class MainMenuView extends View {
             + "\nS – Saved Game"
             + "\nC – View Challenges"
             + "\nV – View Map"
+            + "\nP – Health Strenght of Food"
             + "\nQ – Quit"
             + "\n------------------------------");
     
@@ -51,6 +54,9 @@ public class MainMenuView extends View {
                 break;
             case 'V':
                 this.viewMap();
+                break;
+            case 'P':
+                this.HealthControl();
                 break;
             case 'Q' :
                 return false;
@@ -83,8 +89,18 @@ public class MainMenuView extends View {
          ChallengeMenuView challengeMenu = new ChallengeMenuView();
         challengeMenu.display();
     }
-       private void viewMap() {
+    private void viewMap() {
         MapMenuView viewMap = new MapMenuView();
         viewMap.display();
     }        
+
+    public void HealthControl(String a[]) {
+        int[] arr1 = {17,89,76,56,45,90,43,112};
+        int[] arr2 = SortOfHealthStrenght(arr1);
+        for(int i:arr2){
+            System.out.print(i);
+            System.out.print(", ");
+        }
+
+    }
 }

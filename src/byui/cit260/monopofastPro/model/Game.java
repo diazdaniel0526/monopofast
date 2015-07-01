@@ -15,13 +15,10 @@ import java.util.Objects;
  */
 public class Game implements Serializable{
     private String descriptionOfGame;
-    private int totalScore;
-    
+    private int totalScore;  
     private Player player;
-
     private CharacterOfGame character;
-    
-    private Restaurant restaurant;
+    private Map map;
     
     public Game() {
     }
@@ -92,12 +89,12 @@ public class Game implements Serializable{
     }
     
 
-    public Restaurant getRestaurant() {
-        return restaurant;
+    public Map getRestaurant() {
+        return map;
     }
 
-    public void setRestaurant(Restaurant restaurant) {
-        this.restaurant = restaurant;
+    public void setRestaurant(Map restaurant) {
+        this.map = restaurant;
     }
     
     

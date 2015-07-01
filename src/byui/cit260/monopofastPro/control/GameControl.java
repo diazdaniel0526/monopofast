@@ -5,7 +5,9 @@
  */
 package byui.cit260.monopofastPro.control;
 
+import byui.cit260.monopofastPro.model.Game;
 import byui.cit260.monopofastPro.model.Player;
+import monopofastpro.Monopofastpro;
 
 /**
  *
@@ -14,7 +16,17 @@ import byui.cit260.monopofastPro.model.Player;
 public class GameControl {
 
     public static void createNewGame(Player player) {
-         System.out.println(" *** createnewgame function called ***" );
+         
+        Game game = new Game();
+        Monopofastpro.setCurrentGame(game);
+        
+        game.setPlayer(player);
+        
+        Map map = MapControl.createMap();
+        game.setMap(map);
+        
+        MapControl.MoveActorsToStartingLocation(map);
+            
     }
     
 }

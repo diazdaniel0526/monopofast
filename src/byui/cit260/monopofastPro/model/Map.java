@@ -13,12 +13,17 @@ import java.util.Objects;
  *
  * @author Galicia
  */
-public class Restaurant implements Serializable{
+public class Map implements Serializable{
     private String name;
     private String description;
     private final ArrayList<Game> games = new ArrayList<>();
+    private Location[][] locations;
 
-    public Restaurant() {
+    public Map() {
+    }
+
+    public Map(int i, int i0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
@@ -42,7 +47,7 @@ public class Restaurant implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Restaurant other = (Restaurant) obj;
+        final Map other = (Map) obj;
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
