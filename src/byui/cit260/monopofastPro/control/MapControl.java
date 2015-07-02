@@ -25,7 +25,17 @@ public class MapControl {
       return map;
 }
     
-    public static void moveActorsToStartingLocation(Character character, Point coordinates) 
+    public static void moveActorsToStartingLocation(Map map) 
+                            throws MapControlExceptions {
+        Character[] character = Character.values();
+        
+        for (Character character : character) {
+            Point coordinates = character.getCoordinates();
+            MapControl.moveActorsToLocation(character, coordinates);
+           }
+    }
+    
+    public static void moveActorsToLocation(Character character, Point coordinates) 
                             throws MapControlExceptions {
         Map map = Monopofastpro.getCurrentGame().getMap();
         int newRow = coordinates.x-1;
@@ -45,6 +55,10 @@ public class MapControl {
     }
 
     private static void assignLocationsToWorkstations(Map map, Workstation[] workstation) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public static void moveActorsToLocation(byui.cit260.monopofastPro.model.Character character, Point coordinates) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

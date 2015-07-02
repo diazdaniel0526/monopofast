@@ -18,7 +18,7 @@ public class Location implements Serializable {
     // class instance variables
     private int location; 
     private String levelType;
-    private CharacterOfGame[] characters;
+    private Character[] characters;
     private Workstation workstation;
 
     public int getLocation() {

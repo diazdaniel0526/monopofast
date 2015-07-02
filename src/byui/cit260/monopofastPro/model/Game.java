@@ -17,7 +17,7 @@ public class Game implements Serializable{
     private String descriptionOfGame;
     private int totalScore;  
     private Player player;
-    private CharacterOfGame character;
+    private Character character;
     private Map map;
     
     public Game() {
@@ -80,11 +80,11 @@ public class Game implements Serializable{
         this.player = player;
     }
 
-    public CharacterOfGame getCharacter() {
+    public Character getCharacter() {
         return character;
     }
 
-    public void setCharacter(CharacterOfGame character) {
+    public void setCharacter(Character character) {
         this.character = character;
     }
     

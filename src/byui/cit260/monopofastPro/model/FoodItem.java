@@ -15,22 +15,22 @@ import java.util.Objects;
 public enum FoodItem implements Serializable {
     //class instance variables
     
-  	bottomBun("bun.", "17"),
-        burger("burger.", "89"),
-        cheese("chesse.", "76"),
-        bacon("bacon.", "56"),
-        lettuce("lettuce.", "45"),
-        tomato("tomato.", "90"),
-        mayo("mayo.", "43"),
-        topBun("bun.", "112");
+  	bottomBun("bun.", 17),
+        burger("burger.", 89),
+        cheese("chesse.", 76),
+        bacon("bacon.", 56),
+        lettuce("lettuce.", 45),
+        tomato("tomato.", 90),
+        mayo("mayo.", 43),
+        topBun("bun.", 112);
 
     
     private final String typeOfFood;
-    private final String healthStrenght; 
+    private final int healthStrenght; 
     private IngredientOrder[] ingredientOrders;
 
            
-    FoodItem(String healthStrenght, String typeOfFood) {
+    FoodItem( String typeOfFood, int healthStrenght) {
         this.healthStrenght = healthStrenght;
         this.typeOfFood = typeOfFood;
      }
@@ -41,7 +41,7 @@ public enum FoodItem implements Serializable {
     }
 
   
-    public String getHealthStrenght() {
+    public int getHealthStrenght() {
         return healthStrenght;
     }    
     

@@ -5,22 +5,24 @@
  */
 package byui.cit260.monopofastPro.control;
 
+import byui.cit260.monopofastPro.model.FoodItem;
+
 /**
  *
  * @author Galicia
  */
 public class HealthControl {
      
-    public static int[] SortingHealthStrenght(int[] arr){
+    public static FoodItem[] SortingHealthStrenght(FoodItem[] arr){
          
         for (int i = 0; i < arr.length - 1; i++)
         {
             int index = i;
             for (int j = i + 1; j < arr.length; j++)
-                if (arr[j] < arr[index])
+                if (arr[j].getHealthStrenght() < arr[index].getHealthStrenght())
                     index = j;
       
-            int smallerNumber = arr[index]; 
+            FoodItem smallerNumber = arr[index]; 
             arr[index] = arr[i];
             arr[i] = smallerNumber;
         }
