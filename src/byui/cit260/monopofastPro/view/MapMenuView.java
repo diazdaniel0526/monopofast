@@ -19,6 +19,34 @@ public class MapMenuView extends View {
             + "\nQ – Quit"
             + "\n------------------------------");
     }
+        
+   
+   public Double getDoubleNumber() {     
+   Double double = null;
+            Object number;
+   
+   while(number == null) {
+    String value = this.getInput();
+    value = value.trim().toUpperCase();
+    if (value = value.equals("Q"))
+        break;
+    
+    
+    try {
+    number = Double.parseDouble(value);
+    } catch (NumberFormatException nf) {
+        
+        System.out.println("\n You must enter a valid number."
+                            + "Try again or enter Q to quit.");
+    
+    }
+        }
+   return number;
+   }
+
+    
+    
+    
    @Override 
    public boolean doAction(Object obj) {
        

@@ -49,7 +49,14 @@ public class Monopofastpro {
     public static void main(String[] args) { 
         //create start programViewand start the program
         StartProgramView startProgramView = new StartProgramView();
+        
+        try{
         startProgramView.startProgram();
+        } catch (Throwable te) {
+            System.out.println(te.getMessage());
+            te.printStackTrace();
+           startProgramView.startProgram(); 
+        }
     }
     
 }
