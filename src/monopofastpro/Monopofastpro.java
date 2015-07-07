@@ -9,6 +9,10 @@ import byui.cit260.monopofastPro.model.Game;
 import byui.cit260.monopofastPro.model.Map;
 import byui.cit260.monopofastPro.model.Player;
 import byui.cit260.monopofastPro.view.StartProgramView;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 
 /**
  *
@@ -19,6 +23,9 @@ public class Monopofastpro {
     private static Game currentGame = null;
     private static Player player = null;
     private static Map map = null;
+    
+    private static PrintWriter outFile = null;
+    private static BufferedReader inFile = null;
 
     public static Game getCurrentGame() {
         return currentGame;
@@ -43,10 +50,34 @@ public class Monopofastpro {
     public static void setMap(Map map) {
         Monopofastpro.map = map;
     }
+
+    public static PrintWriter getOutFile() {
+        return outFile;
+    }
+
+    public static void setOutFile(PrintWriter outFile) {
+        Monopofastpro.outFile = outFile;
+    }
+
+    public static BufferedReader getInFile() {
+        return inFile;
+    }
+
+    public static void setInFile(BufferedReader inFile) {
+        Monopofastpro.inFile = inFile;
+    }
+
+    
     
     
     
     public static void main(String[] args) { 
+        
+        //open character stream files for end user inout and output
+        Monopofastpro.inFile = 
+                new BufferedReader(new InputStreamReader(System.in));
+        Monopofastpro.outFile = new PrintWriter(System.out, true);
+        
         //create start programViewand start the program
         StartProgramView startProgramView = new StartProgramView();
         
@@ -57,6 +88,18 @@ public class Monopofastpro {
             te.printStackTrace();
            startProgramView.startProgram(); 
         }
-    }
+        finally {
+            try {
+                if (Monopofastpro.inFile != null)
+                    Monopofastpro.inFile.close();
+                
+                if (Monopofastpro.outFile != null)
+                    Monopofastpro.outFile.close();
+            } catch (IOException ex) {
+                System.out.println("Error closing files");
+                return;
+            }
+        }
+    }   
     
 }
