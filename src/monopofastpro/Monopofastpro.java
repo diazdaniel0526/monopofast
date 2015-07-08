@@ -26,6 +26,8 @@ public class Monopofastpro {
     
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
+    
+    private static PrintWriter logFile = null;
 
     public static Game getCurrentGame() {
         return currentGame;
@@ -67,6 +69,14 @@ public class Monopofastpro {
         Monopofastpro.inFile = inFile;
     }
 
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        Monopofastpro.logFile = logFile;
+    }
+
     
     
     
@@ -78,11 +88,18 @@ public class Monopofastpro {
                 new BufferedReader(new InputStreamReader(System.in));
         Monopofastpro.outFile = new PrintWriter(System.out, true);
         
+       
+        
         //create start programViewand start the program
         StartProgramView startProgramView = new StartProgramView();
         
         try{
         startProgramView.startProgram();
+        
+         //open log file
+        String filePath = "C:\\Users\\Galicia\\Desktop\\logfile.txt";
+        Monopofastpro.logFile = new PrintWriter(filePath);
+        
         } catch (Throwable te) {
             System.out.println(te.getMessage());
             te.printStackTrace();
@@ -95,6 +112,9 @@ public class Monopofastpro {
                 
                 if (Monopofastpro.outFile != null)
                     Monopofastpro.outFile.close();
+                
+                if (Monopofastpro.logFile != null)
+                    Monopofastpro.logFile.close();
             } catch (IOException ex) {
                 System.out.println("Error closing files");
                 return;

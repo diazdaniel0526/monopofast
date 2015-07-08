@@ -5,7 +5,10 @@
  */
 package byui.cit260.monopofastPro.view;
 
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import monopofastpro.Monopofastpro;
 
 /**
  *
@@ -14,6 +17,9 @@ import java.util.Scanner;
 public abstract class View implements ViewInterface {
     
     private String promptMessage;
+    
+    protected final BufferedReader keyboard = Monopofastpro.getInFile();
+    protected final PrintWriter console = Monopofastpro.getOutFile();
     
     public View(String promptMessage){
         this.promptMessage = promptMessage;
