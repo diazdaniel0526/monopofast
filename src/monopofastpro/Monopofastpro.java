@@ -93,6 +93,7 @@ public class Monopofastpro {
         //create start programViewand start the program
         StartProgramView startProgramView = new StartProgramView();
         
+        
         try{
         startProgramView.startProgram();
         
