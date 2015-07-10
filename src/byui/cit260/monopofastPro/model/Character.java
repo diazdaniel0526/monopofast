@@ -40,7 +40,7 @@ public enum Character implements Serializable{
         try {
             MapControl.moveActorsToLocation(character, coordinates);
         } catch (MapControlExceptions me) {
-            System.out.println(me.getMessage());
+            this.console.println(me.getMessage());
         }
     }
     

@@ -32,7 +32,7 @@ public abstract class View implements ViewInterface {
         boolean done = true;
         
         do {
-            System.out.println(promptMessage);//display promp message 
+            this.console.println(promptMessage);//display promp message 
             value = this.getInput();
             //selection = input.charAt(0);
             done = this.doAction(value); // do cation based on the value entered
@@ -51,7 +51,7 @@ public abstract class View implements ViewInterface {
         while(!valid) { //while a valid name has not been retrieved
             
             //prompt for the players name
-            System.out.println("Enter your selection here:");
+            this.console.println("Enter your selection here:");
             
             //get the name form the keobard and trim off the blanks
             value = keyboard.nextLine();
@@ -59,7 +59,7 @@ public abstract class View implements ViewInterface {
             
             //if the name is invalid (less than to character in length))
             if (value.length() < 1) {
-                System.out.println("Invalid selection - the selection should be one letter");
+                this.console.println("Invalid selection - the selection should be one letter");
                 continue; // and repeat again
             }
             break; // out of the (exit) the repetition

@@ -48,13 +48,13 @@ public class PauseMenuView extends View {
             case 'Q' :
                 return false;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                this.console.println("\n*** Invalid Selection *** Try Again");
         }
         return true;
     }
 
     private void restartLevel() {
-        System.out.println(" ** restartLevel Funtion in Progress **");
+        this.console.println(" ** restartLevel Funtion in Progress **");
     }
 
     private void viewMap() {
@@ -63,11 +63,11 @@ public class PauseMenuView extends View {
     }
 
     private void saveProgress() {
-        System.out.println(" ** saveProgress Funtion in Progress **");
+        this.console.println(" ** saveProgress Funtion in Progress **");
     }
 
     private void startNewGame() {
-        System.out.println(" ** startNewGame Funtion still in Progress **");
+       this.console.println(" ** startNewGame Funtion still in Progress **");
     }
     
 }

@@ -62,7 +62,7 @@ public class MainMenuView extends View {
             case 'Q' :
                 return false;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                this.console.println("\n*** Invalid Selection *** Try Again");
         }
         return true;
     }
@@ -83,7 +83,7 @@ public class MainMenuView extends View {
     }
 
     private void saveGame() {
-        System.out.println(" ** savegame function called **");
+        this.console.println(" ** savegame function called **");
     }
 
     private void viewChallenges() {

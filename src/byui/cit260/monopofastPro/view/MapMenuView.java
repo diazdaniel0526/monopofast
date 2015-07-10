@@ -36,7 +36,7 @@ public class MapMenuView extends View {
     number = Double.parseDouble(value);
     } catch (NumberFormatException nf) {
         
-        System.out.println("\n You must enter a valid number."
+        this.console.println("\n You must enter a valid number."
                             + "Try again or enter Q to quit.");
     
     }
@@ -58,12 +58,12 @@ public class MapMenuView extends View {
             case 'Q' :
                 return false;
             default:
-                System.out.println("\n*** Invalid Selection *** Try Again");
+                this.console.println("\n*** Invalid Selection *** Try Again");
         }
         return true;
     }
         private void mapMenu() {
-        System.out.println(" ** Map In Progress Level One etc... **");
+        this.console.println(" ** Map In Progress Level One etc... **");
     }
 }
 
