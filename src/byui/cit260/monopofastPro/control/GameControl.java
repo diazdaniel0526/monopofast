@@ -5,9 +5,13 @@
  */
 package byui.cit260.monopofastPro.control;
 
+import byui.cit260.monopofastPro.exceptions.GameControlException;
 import byui.cit260.monopofastPro.model.Game;
 import byui.cit260.monopofastPro.model.Map;
 import byui.cit260.monopofastPro.model.Player;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import monopofastpro.Monopofastpro;
 
 /**
@@ -28,6 +32,19 @@ public class GameControl {
         
         
             
+    }
+
+    public static void saveGame(Game currentGame, String filePath)
+    throws GameControlException {
+        
+    try(FileOutputStream fops = new FileOutputStream(filePath)) {
+        ObjectOutputStream output = new ObjectOutputStream(fops);
+        
+        output.writeObject(currentGame); // write the game object out to file
+    }    
+    catch(IOException e) {
+        throw new GameControlException(e.getMessage());
+    }
     }
     
 }

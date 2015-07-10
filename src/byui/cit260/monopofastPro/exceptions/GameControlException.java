@@ -9,24 +9,24 @@ package byui.cit260.monopofastPro.exceptions;
  *
  * @author Galicia
  */
-public class HealthControlExceptions extends Exception{
+public class GameControlException extends Exception{
 
-    public HealthControlExceptions() {
+    public GameControlException() {
     }
 
-    public HealthControlExceptions(String message) {
+    public GameControlException(String message) {
         super(message);
     }
 
-    public HealthControlExceptions(String message, Throwable cause) {
+    public GameControlException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public HealthControlExceptions(Throwable cause) {
+    public GameControlException(Throwable cause) {
         super(cause);
     }
 
-    public HealthControlExceptions(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    public GameControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
     

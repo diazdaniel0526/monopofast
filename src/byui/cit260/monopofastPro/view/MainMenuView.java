@@ -24,8 +24,9 @@ public class MainMenuView extends View {
             + "\n |        Main Menu          |"
             + "\n------------------------------"
             + "\nN – Start New Game" 
+            + "\nG - Get and Start Saved Game"
             + "\nH - Get Help"
-            + "\nS – Saved Game"
+            + "\nS – Save Game"
             + "\nC – View Challenges"
             + "\nV – View Map"
             + "\nP – Health Strength of Food"
@@ -44,6 +45,9 @@ public class MainMenuView extends View {
             case 'N' :
                 this.startNewGame();
                 break;
+            case 'G' :
+                this.startExistingGame();
+                break;    
             case 'H' :
                 this.getHelp();
                 break;
@@ -83,7 +87,17 @@ public class MainMenuView extends View {
     }
 
     private void saveGame() {
-        this.console.println(" ** savegame function called **");
+        // prompt for and get the name of the file to save the game in
+        System.out.println("\n\nEnter the file path for the file where the game"
+                            + "is to be saved.");
+        String filePath = this.getInput();
+        
+        try {
+            // save the game to the specified file
+            GameControl.saveGame(Monopofastpro.getCurrentGame(), filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
     }
 
     private void viewChallenges() {
@@ -100,5 +114,9 @@ public class MainMenuView extends View {
          
                    
         }
+
+    private void startExistingGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     }
