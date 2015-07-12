@@ -30,6 +30,7 @@ public class MainMenuView extends View {
             + "\nC – View Challenges"
             + "\nV – View Map"
             + "\nP – Health Strength of Food"
+            + "\nR – Print Character Report"
             + "\nQ – Quit"
             + "\n------------------------------");
     
@@ -63,6 +64,9 @@ public class MainMenuView extends View {
             case 'P':
                 this.HealthControl(FoodItem.values());
                 break;
+            case 'R':
+                this.printReport();
+                break;    
             case 'Q' :
                 return false;
             default:
@@ -116,6 +120,10 @@ public class MainMenuView extends View {
         }
 
     private void startExistingGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void printReport() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
