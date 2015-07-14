@@ -115,7 +115,20 @@ public class MainMenuView extends View {
 
     public void HealthControl(FoodItem footItemList[]) {
         FoodItem[] sortedFoodItems = HealthControl.SortingHealthStrenght(footItemList);
+            this.console.println("\nList of Foot Items");
+         this.console.println("Health" + "\t"
+                          + "In Stock");
          
+         // for each inventory item
+         for (FoodItem foodItem : sortedFoodItems) {
+             // DISPLAY the description, the required amount and amount in stock
+             this.console.println(foodItem.getTypeOfFood() + "\t   "
+                              + foodItem.getHealthStrenght());
+         }
+         
+         // display other sub menus
+         GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
                    
         }
 

@@ -21,8 +21,8 @@ public class MapMenuView extends View {
     }
         
    
-   public Double getDoubleNumber() {     
-   Double double = null;
+   public double getNumber() {     
+   double number = null;
             Object number;
    
    while(number == null) {
