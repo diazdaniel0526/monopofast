@@ -91,11 +91,11 @@ public class Monopofastpro {
        
         
         //create start programViewand start the program
-        StartProgramView startProgramView = new StartProgramView();
+        StartProgramView startProgramView = new StartProgramView("");
         
         
         try{
-        startProgramView.startProgram();
+        startProgramView.display();
         
          //open log file
         String filePath = "C:\\Users\\Galicia\\Desktop\\logfile.txt";
@@ -104,7 +104,7 @@ public class Monopofastpro {
         } catch (Throwable te) {
             System.out.println(te.getMessage());
             te.printStackTrace();
-           startProgramView.startProgram(); 
+           startProgramView.display(); 
         }
         finally {
             try {
