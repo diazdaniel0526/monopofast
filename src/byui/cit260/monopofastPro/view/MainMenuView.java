@@ -127,8 +127,8 @@ public class MainMenuView extends View {
          }
          
          // display other sub menus
-         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.display();
+         MapMenuView viewMap = new MapMenuView();
+        viewMap.display();
                    
         }
 
