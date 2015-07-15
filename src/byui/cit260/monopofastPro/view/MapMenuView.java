@@ -14,35 +14,44 @@ public class MapMenuView extends View {
         public MapMenuView()
     {   super("\n"
             + "\n------------------------------"
-            + "\n |       Map                 |"
+            +"\n*********** Food World 1 ***********"
+            +"   | 0  | 1  | 2  | 3  | 4  | 5  | "
+            +"\n*********** Food World 2 ***********"
+            +"   | 0  | 1  | 2  | 3  | 4  | 5  | "
+            +"\n*********** Food World 3 ***********"
+            +"   | 0  | 1  | 2  | 3  | 4  | 5  | "
+            +"\n*********** Food World 4 ***********"
+            +"   | 0  | 1  | 2  | 3  | 4  | 5  | "
+            +"\n*********** Food World 5 ***********"
+            +"   | 0  | 1  | 2  | 3  | 4  | 5  | "
             + "\n------------------------------"
             + "\nQ – Quit"
             + "\n------------------------------");
     }
         
    
-   public double getNumber() {     
-   double number = null;
-            Object number;
-   
-   while(number == null) {
-    String value = this.getInput();
-    value = value.trim().toUpperCase();
-    if (value = value.equals("Q"))
-        break;
-    
-    
-    try {
-    number = Double.parseDouble(value);
-    } catch (NumberFormatException nf) {
-        
-        this.console.println("\n You must enter a valid number."
-                            + "Try again or enter Q to quit.");
-    
-    }
-        }
-   return number;
-   }
+//   public double getNumber() {     
+//   double number = null;
+//            Object number;
+//   
+//   while(number == null) {
+//    String value = this.getInput();
+//    value = value.trim().toUpperCase();
+//    if (value = value.equals("Q"))
+//        break;
+//    
+//    
+//    try {
+//    number = Double.parseDouble(value);
+//    } catch (NumberFormatException nf) {
+//        
+//        this.console.println("\n You must enter a valid number."
+//                            + "Try again or enter Q to quit.");
+//    
+//    }
+//        }
+//   return number;
+//   }
 
     
     

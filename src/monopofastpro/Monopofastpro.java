@@ -6,6 +6,7 @@
 package monopofastpro;
 
 import byui.cit260.monopofastPro.model.Game;
+import byui.cit260.monopofastPro.model.Location;
 import byui.cit260.monopofastPro.model.Map;
 import byui.cit260.monopofastPro.model.Player;
 import byui.cit260.monopofastPro.view.StartProgramView;
@@ -23,6 +24,7 @@ public class Monopofastpro {
     private static Game currentGame = null;
     private static Player player = null;
     private static Map map = null;
+    private static Location location = null;
     
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
@@ -53,6 +55,15 @@ public class Monopofastpro {
         Monopofastpro.map = map;
     }
 
+    public static Location getLocation() {
+        return location;
+    }
+
+    public static void setLocation(Location location) {
+        Monopofastpro.location = location;
+    }
+    
+    
     public static PrintWriter getOutFile() {
         return outFile;
     }

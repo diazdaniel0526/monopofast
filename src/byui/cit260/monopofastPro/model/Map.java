@@ -20,6 +20,7 @@ public class Map implements Serializable{
     private Location[][] locations;
     private int noOfRows;
     private int noOfColumns;
+   
     
 
     public Map() {
@@ -92,6 +93,14 @@ public class Map implements Serializable{
 
     public void setNoOfColumns(int noOfColumns) {
         this.noOfColumns = noOfColumns;
+    }
+
+    public Location[][] getLocations() {
+        return locations;
+    }
+
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
     }
     
     

@@ -9,6 +9,7 @@ import byui.cit260.monopofastPro.control.GameControl;
 import byui.cit260.monopofastPro.control.HealthControl;
 import static byui.cit260.monopofastPro.control.HealthControl.SortingHealthStrenght;
 import byui.cit260.monopofastPro.model.FoodItem;
+import byui.cit260.monopofastPro.model.Location;
 //import java.util.Scanner;
 import monopofastpro.Monopofastpro;
 
@@ -109,8 +110,34 @@ public class MainMenuView extends View {
         challengeMenu.display();
     }
     private void viewMap() {
-        MapMenuView viewMap = new MapMenuView();
-        viewMap.display();
+          Location[][] locations = Monopofastpro.getCurrentGame().getMap().getLocations();
+          
+          System.out.println("\n********** Food World 1 ***********");
+          System.out.println("\n   | 0  | 1  | 2  | 3  | 4  | 5  | ");
+          System.out.println("\n********** Food World 2 ***********");
+          System.out.println("\n   | 0  | 1  | 2  | 3  | 4  | 5  | ");
+          System.out.println("\n********** Food World 3 ***********");
+          System.out.println("\n   | 0  | 1  | 2  | 3  | 4  | 5  | ");
+          System.out.println("\n********** Food World 4 ***********");
+          System.out.println("\n   | 0  | 1  | 2  | 3  | 4  | 5  | ");
+          System.out.println("\n********** Food World 5 ***********");
+          System.out.println("\n   | 0  | 1  | 2  | 3  | 4  | 5  | ");
+          
+          for (int i = 0; i < locations[0].length; i++) {
+
+            System.out.println("\n------------------------------------------------------");
+             System.out.format("%2d", i);
+             for (int j = 0; j < locations[0].length; j++) {
+                 System.out.print(" | ");
+                 System.out.print(locations[i][j].getWorkstation());
+ 
+             }
+             System.out.print(" | ");
+         }
+
+       System.out.println("\n------------------------------------------------------");
+       
+       
     }        
 
     public void HealthControl(FoodItem footItemList[]) {
@@ -127,8 +154,8 @@ public class MainMenuView extends View {
          }
          
          // display other sub menus
-         MapMenuView viewMap = new MapMenuView();
-        viewMap.display();
+         //MapMenuView viewMap = new MapMenuView();
+        //viewMap.display();
                    
         }
 
