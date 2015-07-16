@@ -27,10 +27,10 @@ public class MapControl {
     
     public static void moveActorsToStartingLocation(Map map) 
                             throws MapControlExceptions {
-        Character[] character = Character.values();
+        Character[] character = Character.Values();
         
         for (Character character : character) {
-            Point coordinates = character.getCoordinates();
+            Point coordinates = Character.getCoordinates();
             MapControl.moveActorsToLocation(character, coordinates);
            }
     }

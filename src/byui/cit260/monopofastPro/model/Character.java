@@ -33,16 +33,16 @@ public enum Character implements Serializable{
         coordinates = new Point(1,1);
     }
 
-    @Override
-    public boolean doAction(String choice) {
-        Character character = null;
-        
-        try {
-            MapControl.moveActorsToLocation(character, coordinates);
-        } catch (MapControlExceptions me) {
-            this.console.println(me.getMessage());
-        }
-    }
+//    @Override
+//    public boolean doAction(String choice) {
+//        Character character = null;
+//        
+//        try {
+//            MapControl.moveActorsToLocation(character, coordinates);
+//        } catch (MapControlExceptions me) {
+//            this.console.println(me.getMessage());
+//        }
+//    }
     
     public Point getCoordinates() {
         return coordinates;

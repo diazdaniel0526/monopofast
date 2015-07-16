@@ -5,12 +5,16 @@
  */
 package byui.cit260.monopofastPro.control;
 
+import byui.cit260.monopofastPro.exceptions.ActionException;
 import byui.cit260.monopofastPro.exceptions.GameControlException;
 import byui.cit260.monopofastPro.model.Game;
 import byui.cit260.monopofastPro.model.Map;
 import byui.cit260.monopofastPro.model.Player;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import monopofastpro.Monopofastpro;
 
@@ -46,5 +50,15 @@ public class GameControl {
         throw new GameControlException(e.getMessage());
     }
     }
-    
+     public static void loadGame(String filePath) throws ActionException{
+         Game game = null;
+         try(FileInputStream fips = new FileInputStream(filePath)){
+             ObjectInputStream input = new ObjectInputStream(fips);
+             game = (Game) input.readObject();
+         }catch(FileNotFoundException fnfe){
+             throw new ActionException(fnfe.getMessage());
+         }catch(Exception e){
+             throw new ActionException(e.getMessage());
+         }
+     }
 }
