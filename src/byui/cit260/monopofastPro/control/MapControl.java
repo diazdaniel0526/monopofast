@@ -7,6 +7,7 @@ package byui.cit260.monopofastPro.control;
 
 import byui.cit260.monopofastPro.exceptions.MapControlExceptions;
 import byui.cit260.monopofastPro.model.Map;
+import byui.cit260.monopofastPro.model.Character;
 import byui.cit260.monopofastPro.model.Workstation;
 import java.awt.Point;
 import monopofastpro.Monopofastpro;
@@ -25,13 +26,13 @@ public class MapControl {
       return map;
 }
     
-    public static void moveActorsToStartingLocation(Map map) 
+    public static void moveActorsToStartingLocation(Map map, Point coordinate) 
                             throws MapControlExceptions {
-        Character[] character = Character.Values();
+       Character[] characters = Character.values();
         
-        for (Character character : character) {
-            Point coordinates = Character.getCoordinates();
-            MapControl.moveActorsToLocation(character, coordinates);
+        for (Character character : characters) {
+            
+            MapControl.moveActorsToLocation(character, coordinate);
            }
     }
     
@@ -58,9 +59,7 @@ public class MapControl {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public static void moveActorsToLocation(byui.cit260.monopofastPro.model.Character character, Point coordinates) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     private static class MapControlException extends Exception {
 

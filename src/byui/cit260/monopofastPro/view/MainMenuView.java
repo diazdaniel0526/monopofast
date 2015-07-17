@@ -8,8 +8,12 @@ package byui.cit260.monopofastPro.view;
 import byui.cit260.monopofastPro.control.GameControl;
 import byui.cit260.monopofastPro.control.HealthControl;
 import static byui.cit260.monopofastPro.control.HealthControl.SortingHealthStrenght;
+import byui.cit260.monopofastPro.exceptions.ActionException;
+import byui.cit260.monopofastPro.exceptions.HealthControlExceptions;
 import byui.cit260.monopofastPro.model.FoodItem;
 import byui.cit260.monopofastPro.model.Location;
+import java.io.IOException;
+import java.io.PrintWriter;
 //import java.util.Scanner;
 import monopofastpro.Monopofastpro;
 
@@ -66,7 +70,7 @@ public class MainMenuView extends View {
                 this.HealthControl(FoodItem.values());
                 break;
             case 'R':
-                this.printReport();
+                this.printReport(FoodItem.values());
                 break;    
             case 'Q' :
                 return false;
@@ -110,32 +114,35 @@ public class MainMenuView extends View {
         challengeMenu.display();
     }
     private void viewMap() {
-          Location[][] locations = Monopofastpro.getCurrentGame().getMap().getLocations();
-          
-          System.out.println("\n********** Food World 1 ***********");
-          System.out.println("\n   | 0  | 1  | 2  | 3  | 4  | 5  | ");
-          System.out.println("\n********** Food World 2 ***********");
-          System.out.println("\n   | 0  | 1  | 2  | 3  | 4  | 5  | ");
-          System.out.println("\n********** Food World 3 ***********");
-          System.out.println("\n   | 0  | 1  | 2  | 3  | 4  | 5  | ");
-          System.out.println("\n********** Food World 4 ***********");
-          System.out.println("\n   | 0  | 1  | 2  | 3  | 4  | 5  | ");
-          System.out.println("\n********** Food World 5 ***********");
-          System.out.println("\n   | 0  | 1  | 2  | 3  | 4  | 5  | ");
-          
-          for (int i = 0; i < locations[0].length; i++) {
-
-            System.out.println("\n------------------------------------------------------");
-             System.out.format("%2d", i);
-             for (int j = 0; j < locations[0].length; j++) {
-                 System.out.print(" | ");
-                 System.out.print(locations[i][j].getWorkstation());
- 
-             }
-             System.out.print(" | ");
-         }
-
-       System.out.println("\n------------------------------------------------------");
+        
+        MapMenuView mapMenu = new MapMenuView();
+        mapMenu.display();
+//          Location[][] locations = Monopofastpro.getCurrentGame().getMap().getLocations();
+//          
+//          System.out.println("\n********** Food World 1 ***********");
+//          System.out.println("\n   | 0  | 1  | 2  | 3  | 4  | 5  | ");
+//          System.out.println("\n********** Food World 2 ***********");
+//          System.out.println("\n   | 0  | 1  | 2  | 3  | 4  | 5  | ");
+//          System.out.println("\n********** Food World 3 ***********");
+//          System.out.println("\n   | 0  | 1  | 2  | 3  | 4  | 5  | ");
+//          System.out.println("\n********** Food World 4 ***********");
+//          System.out.println("\n   | 0  | 1  | 2  | 3  | 4  | 5  | ");
+//          System.out.println("\n********** Food World 5 ***********");
+//          System.out.println("\n   | 0  | 1  | 2  | 3  | 4  | 5  | ");
+//          
+//          for (int i = 0; i < locations[0].length; i++) {
+//
+//            System.out.println("\n------------------------------------------------------");
+//             System.out.format("%2d", i);
+//             for (int j = 0; j < locations[0].length; j++) {
+//                 System.out.print(" | ");
+//                 System.out.print(locations[i][j].getWorkstation());
+// 
+//             }
+//             System.out.print(" | ");
+//         }
+//
+//       System.out.println("\n------------------------------------------------------");
        
        
     }        
@@ -143,8 +150,7 @@ public class MainMenuView extends View {
     public void HealthControl(FoodItem footItemList[]) {
         FoodItem[] sortedFoodItems = HealthControl.SortingHealthStrenght(footItemList);
             this.console.println("\nList of Foot Items");
-         this.console.println("Health" + "\t"
-                          + "In Stock");
+         this.console.println("Health");
          
          // for each inventory item
          for (FoodItem foodItem : sortedFoodItems) {
@@ -163,8 +169,28 @@ public class MainMenuView extends View {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void printReport() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private void printReport(FoodItem footItemList[]) 
+        throws HealthControlExceptions {
+         try (PrintWriter out = new PrintWriter("C:\\Users\\Galicia\\Desktop\\logfile.txt")) {
+            
+              FoodItem[] sortedFoodItems = HealthControl.SortingHealthStrenght(footItemList);
+            this.console.println("\nLIST OF FOOD ITEMS");  
+            this.console.println("\nFoot Item");
+            this.console.println("Health");
+         
+         // for each inventory item
+         for (FoodItem foodItem : sortedFoodItems) {
+             // DISPLAY the description, the required amount and amount in stock
+             out.println(foodItem.getTypeOfFood() + "\t   "
+                              + foodItem.getHealthStrenght());
+         }
+          
+             
+             System.out.println("Health printed");
+         } catch (IOException te) {
+             ErrorView.display("GameMenuView", te.getMessage());
+         
     }
 
     }
+}

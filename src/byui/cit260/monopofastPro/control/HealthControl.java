@@ -5,7 +5,10 @@
  */
 package byui.cit260.monopofastPro.control;
 
+import byui.cit260.monopofastPro.exceptions.ActionException;
 import byui.cit260.monopofastPro.model.FoodItem;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  *
@@ -28,7 +31,29 @@ public class HealthControl {
         }
         return arr;
     }
-          
+   
+//    public static void printHealth(FoodItem foodItemList[])
+//             throws ActionException {
+//         try (PrintWriter out = new PrintWriter("C:\\Users\\Galicia\\Desktop\\logfile.txt")) {
+//            
+//              FoodItem[] sortedFoodItems = HealthControl.SortingHealthStrenght(footItemList);
+//            out.println("\nList of Foot Items");
+//            out.println("Health");
+//         
+//         // for each inventory item
+//         for (FoodItem foodItem : sortedFoodItems) {
+//             // DISPLAY the description, the required amount 
+//             out.println(foodItem.getTypeOfFood() + "\t   "
+//                              + foodItem.getHealthStrenght());
+//         }
+//                 
+//             
+//             System.out.println("Health printed");
+//         } catch (IOException e) {
+//             throw new ActionException(e.getMessage());
+//         }
+//     }
+    
   }
 
 
